@@ -2,8 +2,11 @@ FROM datt/datt-openjdk7:latest
 MAINTAINER John Albietz "inthecloud247@gmail.com"
 
 RUN `# install scala;` \
-  export SCALA_PKG="scala-2.10.3.deb"; \
+  \
+  `# libjansi + deps needed for scala`; \
   apt-get install -y libhawtjni-runtime-java libjansi-java libjansi-native-java; \
+  \
+  export SCALA_PKG="scala-2.10.3.deb"; \
   wget http://www.scala-lang.org/files/archive/$SCALA_PKG; \
   dpkg -i $SCALA_PKG; \
   rm -vf $SCALA_PKG; \

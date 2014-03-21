@@ -1,5 +1,5 @@
 FROM datt/datt-openjdk7:latest
-MAINTAINER inthecloud247 "inthecloud247@gmail.com"
+MAINTAINER John Albietz "inthecloud247@gmail.com"
 
 RUN `# install scala;` \
   export SCALA_PKG="scala-2.10.3.deb"; \
@@ -16,7 +16,12 @@ RUN `# install sbt;` \
   rm -vf $SBT_PKG; \
   which sbt;
 
-# update java, scala and sbt jars
+# update java, scala and sbt jars by running the commands
+
 RUN java -version
+
+# the `true` is needed for the image to build w/o errors.
+# not sure why.
 RUN scala -version || true
+
 RUN sbt --version

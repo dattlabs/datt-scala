@@ -27,4 +27,4 @@ RUN java -version
 # not sure why.
 RUN scala -version || true
 
-RUN sbt --version
+RUN sbt clean || true

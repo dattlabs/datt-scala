@@ -27,4 +27,5 @@ RUN java -version
 # not sure why.
 RUN scala -version || true
 
+# start sbt up so that it downloads/caches some scala libraries and they get stored into the docker image. This speeds up the boot time a lot. error output is given though, so this should be cleaned up with a different command that achieves the same thing if possible.
 RUN sbt clean || true

@@ -14,3 +14,4 @@ project/plugins/project/
 # Scala-IDE specific
 .scala_dependencies
 files/test_server.js
+files/scripts/helpers.bash

@@ -1,5 +1,10 @@
+# datt specific
 Makefile
+files/test_server.js
+files/scripts/helpers.bash
+spec/base_spec.rb
 
+# scala
 *.class
 *.log
 
@@ -13,6 +18,3 @@ project/plugins/project/
 
 # Scala-IDE specific
 .scala_dependencies
-files/test_server.js
-files/scripts/helpers.bash
-spec/base_spec.rb

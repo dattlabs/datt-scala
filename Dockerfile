@@ -26,7 +26,8 @@ RUN `# install sbt;` \
 RUN java -version
 
 # the `true` is needed for the image to build w/o errors.
-# not sure why.
 RUN scala -version || true
+
+RUN sbt update || true
 
 ADD files/ /files/
